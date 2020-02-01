@@ -400,7 +400,7 @@ function newGame(whoPlays) {
             if (snakes[0].dead){
                 window.setTimeout(function () {
                     newGame(whoPlays)
-                },4000);
+                },1000);
             } else if (isStoped){
 
                 window.setTimeout(function () {
@@ -410,7 +410,7 @@ function newGame(whoPlays) {
             else if (snakes[1]){
                 window.setTimeout(function () {
                     newGame(whoPlays)
-                },4000);
+                },1000);
             }
         }else{
             window.setTimeout(function () {
