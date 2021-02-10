@@ -3,12 +3,7 @@ if (true) { //Date.now() < 1583010000000
     nextAct();
 
     function openMap(x,z,server) {
-        if (server){
-            window.open("https://earthmc.net/map/factions/?worldname=earth&mapname=flat&zoom=7&x="  + x  + "&y=64&z=" + z, "_blank");
-        } else{
-            window.open("https://earthmc.net/map/?worldname=earth&mapname=flat&zoom=7&x="  + x  + "&y=64&z=" + z, "_blank");
-        }
-
+        window.open("https://earthmc.net/map/?worldname=earth&mapname=flat&zoom=7&x="  + x  + "&y=64&z=" + z, "_blank");
     }
     function toFull(num) {
         if (num.toString().length == 1){
