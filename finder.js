@@ -74,26 +74,28 @@ if (true) { //Date.now() < 1583010000000
                             table.appendChild(newThread);
 
                         }
-
-                        let newThread = document.createElement("thead");
-                        let newTr = document.createElement('tr');
-                        let newTd = document.createElement('td');
-                        newTd.textContent = i;
-                        newTr.appendChild(newTd);
-                        newTd = document.createElement('td');
-                        newTd.textContent = value.x[0];
-                        newTr.appendChild(newTd);
-                        newTd = document.createElement('td');
-                        newTd.textContent = value.z[0];
-                        newTr.appendChild(newTd);
-                        newTd = document.createElement('td');
-                        newTd.textContent = 'On map';
-                        newTd.style.color = "#E27D60";
-                        newTd.setAttribute('onclick', "openMap(" + value.x[0] + "," + value.z[0] + "," + server + ")");
-                        newTr.appendChild(newTd);
-                        newThread.appendChild(newTr);
-                        table.appendChild(newThread);
+                        if (key.substring(key.length-4, key.length) != "Shop") {
+                            let newThread = document.createElement("thead");
+                            let newTr = document.createElement('tr');
+                            let newTd = document.createElement('td');
+                            newTd.textContent = i;
+                            newTr.appendChild(newTd);
+                            newTd = document.createElement('td');
+                            newTd.textContent = value.x[0];
+                            newTr.appendChild(newTd);
+                            newTd = document.createElement('td');
+                            newTd.textContent = value.z[0];
+                            newTr.appendChild(newTd);
+                            newTd = document.createElement('td');
+                            newTd.textContent = 'On map';
+                            newTd.style.color = "#E27D60";
+                            newTd.setAttribute('onclick', "openMap(" + value.x[0] + "," + value.z[0] + "," + server + ")");
+                            newTr.appendChild(newTd);
+                            newThread.appendChild(newTr);
+                            table.appendChild(newThread);
+                        }
                         i++;
+
 
                     }
                 }
